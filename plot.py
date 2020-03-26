@@ -12,7 +12,7 @@ plt.plot(strain, stress, color='blue', linestyle='-')
 plt.xlabel("Strain (Ext.%)", fontsize = 12)
 plt.ylabel("Stress (MPa)", fontsize = 12)
 plt.show()
-
+plt.title(filename)
 
 ## Part 0
 # Figure out what arguments to add to the loadtxt function call

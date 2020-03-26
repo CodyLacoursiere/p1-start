@@ -7,6 +7,8 @@ data = np.loadtxt(filename, skiprows=32, delimiter=",")   # Attempts to load fil
 range = (len(data))
 stress = data[:,3]
 strain = data[:,7]
+
+plt.plot(strain, stress, color='blue', linestyle='-')
 ## Part 0
 # Figure out what arguments to add to the loadtxt function call
 # so that numbers are loaded into the local function 'data'.

@@ -20,7 +20,6 @@ c1 = np.sum(stress*(strain-strain_mean))/np.sum(strain*(strain-strain_mean))
 c0 = stress_mean - c1*strain_mean
 linreg = c0 + c1*strain
 
-plt.plot(strain, stress, color='blue', linestyle='-', label='Stress Strain Curve')
 plt.plot(strain, linreg, color='green', linestyle='--', label='Linear Regression')
 plt.xlabel('Strain (Ext.%)', fontsize = 12)
 plt.ylabel('Stress (MPa)', fontsize = 12)

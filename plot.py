@@ -11,8 +11,18 @@ strain = data[:,7]
 plt.plot(strain, stress, color='blue', linestyle='-')
 plt.xlabel("Strain (Ext.%)", fontsize = 12)
 plt.ylabel("Stress (MPa)", fontsize = 12)
+plt.legend(loc = 'best', fontsize = 12)
 plt.title(filename , loc='center')
 plt.show() 
+
+strain_mean = np.mean(strain)
+stress_mean = np.mean(stress)
+c1 = np.sum(stress*(strain-strain_mean))/np.sum(strain*(strain*strain_mean))
+c0 = stress_mean - c1*strain_mean
+linreg = c0 + c1*strain
+
+plt.plot(strain, linreg, color='green', linestyle='--')
+plt.legend(loc = 'best', fontsize = 12)
 
 ## Part 0
 # Figure out what arguments to add to the loadtxt function call

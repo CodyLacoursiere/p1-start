@@ -13,7 +13,6 @@ plt.xlabel("Strain (Ext.%)", fontsize = 12)
 plt.ylabel("Stress (MPa)", fontsize = 12)
 plt.legend(loc = 'best', fontsize = 12)
 plt.title(filename , loc='center')
-plt.show() 
 
 strain_mean = np.mean(strain)
 stress_mean = np.mean(stress)
@@ -29,6 +28,8 @@ plt.legend(loc = 'best', fontsize = 12)
 plt.title(filename, loc='center')
 plt.show()
 print("Young's Modulus = {0}" .format(c1) +  " MPa")
+
+plt.savefig(filename + ".png")
 
 ## Part 0
 # Figure out what arguments to add to the loadtxt function call

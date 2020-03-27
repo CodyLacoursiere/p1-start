@@ -28,6 +28,7 @@ plt.ylabel('Stress (MPa)', fontsize = 12)
 plt.legend(loc = 'best', fontsize = 12)
 plt.title(filename, loc='center')
 plt.show()
+print("Young's Modulus = {0}" .format(c1) +  " MPa")
 
 ## Part 0
 # Figure out what arguments to add to the loadtxt function call
